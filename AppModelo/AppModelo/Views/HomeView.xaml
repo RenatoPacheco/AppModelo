@@ -6,23 +6,23 @@
     <ContentPage.Content>
 
         <StackLayout Orientation="Vertical"
-                 Padding="25">
+                     Padding="25">
 
             <Label Text="{Binding Opacidade, StringFormat='Valor da opacidade: {0:F2}'}"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
 
-            <BoxView BackgroundColor="Red" 
-                 Margin="10"
-                 Opacity="{Binding Opacidade}"/>
+            <BoxView BackgroundColor="Red"
+                     Margin="10"
+                     Opacity="{Binding Opacidade}"/>
 
             <Slider Value="{Binding Opacidade}" />
 
             <Entry Keyboard="Email"
-               Placeholder="Campo de entrada"/>
+                   Placeholder="Campo de entrada"/>
 
             <Button Text="Submeter"
-                Command="{Binding SubmeterCommand}" />
+                    Command="{Binding SubmeterCommand}" />
 
         </StackLayout>
 

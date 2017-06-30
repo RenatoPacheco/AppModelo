@@ -11,8 +11,18 @@
                 <Setter Property="BorderRadius" Value="0" />
                 <Setter Property="BorderWidth" Value="1" />
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="BackgroundColor" Value="Black" />
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="Black" iOS="Red" Android="Green" />
+                    </Setter.Value>
+                </Setter>
             </Style>
+
+            <Color x:Key="VarGeral">#4d4d4d</Color>
+            <OnPlatform x:Key="VarPlataforma" x:TypeArguments="Color">
+                <On Platform="iOS">#000000</On>
+                <On Platform="Android">#4d4d4d</On>
+            </OnPlatform>
         </ResourceDictionary>
 	</Application.Resources>
 </Application>
