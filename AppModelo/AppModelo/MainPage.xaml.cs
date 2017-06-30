@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppModelo.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,13 @@ namespace AppModelo
 {
     public partial class MainPage : ContentPage
     {
+        private readonly MainPageViewModel viewModel;
+
         public MainPage()
         {
             InitializeComponent();
+            this.viewModel = new MainPageViewModel();
+            this.BindingContext = this.viewModel;
         }
     }
 }

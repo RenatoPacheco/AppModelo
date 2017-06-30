@@ -13,7 +13,7 @@ namespace AppModelo
         {
             InitializeComponent();
 
-            MainPage = new AppModelo.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
