@@ -12,14 +12,14 @@ namespace AppModelo.ViewModels
     {
         public MainPageViewModel()
         {
-            this.SubmeterCmd = new Command(() => {
+            this.SubmeterCommand = new Command(() => {
 
             }, () => {
                 return this.Opacidade > 0.5;
             });
         }
 
-        public ICommand SubmeterCmd { get; private set; }
+        public ICommand SubmeterCommand { get; private set; }
 
         private double _opacidade;
         public double Opacidade
@@ -31,7 +31,7 @@ namespace AppModelo.ViewModels
                 // Avisando a mudança aos demais observadores
                 this.OnPropertyChanged();
                 // Avisando mudança ao comando
-                ((Command)this.SubmeterCmd).ChangeCanExecute();
+                ((Command)this.SubmeterCommand).ChangeCanExecute();
             }
         }
 
